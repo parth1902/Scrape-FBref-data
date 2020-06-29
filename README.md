@@ -11,7 +11,7 @@ This snapshot from fbref.com indicates the recently added stats I'm talking abou
 **This dataframe snapshot is what you'll end up with. This is outfield Premier League players 2019/20. You can do stuff on it in Python, or save it onto your desktop for visualisations with Tableau or R.**
 
 
-![alt text](PL_Outfield.png)
+![alt text](PL_outfield.png)
 
 
 **This is for the Serie A teams 2019/20**
