@@ -23,7 +23,7 @@ This snapshot from fbref.com indicates the recently added stats I'm talking abou
 **This is for the top 5 leagues keepers 2019/20**
 
 
-![alt text](Top5_Keepers.png)
+![alt text](Top5_Keeper.png)
 
 
 **The order of the columns is like it is on fbref - so standard stats first, then shooting, passing etc. and miscellaneous at the end. Check the fbref glossary for any confusion about the same. The scraper won't work for those leagues which have other columns compared to the top 5 leagues. Do reach out to me on Twitter if there's any problem!**
