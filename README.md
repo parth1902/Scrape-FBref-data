@@ -8,7 +8,7 @@ This snapshot from fbref.com indicates the recently added stats I'm talking abou
 
 ![alt text](fbref.png)
 
-**This dataframe snapshot is what you'll end up with. This is outfield Premier League players 2019/20 You can do stuff on it in Python, or save it onto your desktop for visualisations with Tableau or R.**
+**This dataframe snapshot is what you'll end up with. This is outfield Premier League players 2019/20. You can do stuff on it in Python, or save it onto your desktop for visualisations with Tableau or R.**
 
 
 ![alt text](PL_Outfield.png)
@@ -20,7 +20,7 @@ This snapshot from fbref.com indicates the recently added stats I'm talking abou
 ![alt text](SerieA_Teams.png)
 
 
-*This is for the top 5 leagues keepers 2019/20*
+***This is for the top 5 leagues keepers 2019/20***
 
 
 ![alt text](Top5_Keepers.png)
