@@ -8,8 +8,22 @@ This snapshot from fbref.com indicates the recently added stats I'm talking abou
 
 ![alt text](fbref.png)
 
-**This dataframe snapshot is what you'll end up with. You can do stuff on it in Python, or save it onto your desktop for visualisations with Tableau or R.**
+**This dataframe snapshot is what you'll end up with. This is outfield Premier League players 2019/20 You can do stuff on it in Python, or save it onto your desktop for visualisations with Tableau or R.**
 
-![alt text](dataframe.png)
+
+![alt text](PL_Outfield.png)
+
+
+**This is for the Serie A teams 2019/20**
+
+
+![alt text](SerieA_Teams_.png)
+
+
+*This is for the top 5 leagues keepers 2019/20*
+
+
+![alt text](Top5_Keepers_.png)
+
 
 **The order of the columns is like it is on fbref - so standard stats first, then shooting, passing etc. and miscellaneous at the end. Check the fbref glossary for any confusion about the same. The scraper won't work for those leagues which have other columns compared to the top 5 leagues. Do reach out to me on Twitter if there's any problem!**
