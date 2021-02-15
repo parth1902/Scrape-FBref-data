@@ -10,6 +10,7 @@ import numpy as np
 import re
 import sys, getopt
 import csv
+import copy
 
 ## Links to competitions
 league_links = {
@@ -19,6 +20,15 @@ league_links = {
   "Serie A": ["https://fbref.com/en/comps/11/", "/Serie-A-Stats"],
   "La Liga": ["https://fbref.com/en/comps/12/", "/La-Liga-Stats"]
 }
+
+year_links = {
+  "Bundesliga": {2018: 1634, 2019: 2109, 2020: 3248},
+  "Premier League": {2018: 1631, 2019: 1889, 2020: 3232},
+  "Ligue 1": {2018: 1632, 2019: 2109, 2020: 3243},
+  "Serie A": {2018: 1640, 2019: 1896, 2020: 3260},
+  "La Liga": {2018: 1652, 2019: 1886, 2020: 3239}
+}
+
 ## Table settings
 #standard(stats)
 stats = ["player","nationality","position","squad","age","birth_year","games","games_starts","minutes","goals","assists","pens_made","pens_att","cards_yellow","cards_red","goals_per90","assists_per90","goals_assists_per90","goals_pens_per90","goals_assists_pens_per90","xg","npxg","xa","xg_per90","xa_per90","xg_xa_per90","npxg_per90","npxg_xa_per90"]
@@ -188,8 +198,9 @@ class FbRefScraper:
         continue
       for season in self.seasons:
         print(f"Loading player data for {league} season {season-1}/{season}")
-        link = league_links[league]
+        link = copy.deepcopy(league_links[league])
         if season != 2021:
+          link[0] = link[0] + f"{year_links[league][season]}/"
           link[1] = f"/{season-1}-{season}-" + link[1].replace("/", "")
         df_outfield_league = get_outfield_data(link[0], link[1])
         df_outfield_league["season"] = season
@@ -206,8 +217,9 @@ class FbRefScraper:
         continue
       for season in self.seasons:
         print(f"Loading team data for {league} season {season-1}/{season}")
-        link = league_links[league]
+        link = copy.deepcopy(league_links[league])
         if season != 2021:
+          link[0] = link[0] + f"{year_links[league][season]}/"
           link[1] = f"/{season-1}-{season}-" + link[1].replace("/", "")
         df_teams_league = get_team_data(link[0], link[1])
         df_teams_league["season"] = season
@@ -226,8 +238,9 @@ class FbRefScraper:
         continue
       for season in self.seasons:
         print(f"Loading goalkeeper data for {league} season {season-1}/{season}")
-        link = league_links[league]
+        link = copy.deepcopy(league_links[league])
         if season != 2021:
+          link[0] = link[0] + f"{year_links[league][season]}/"
           link[1] = f"/{season-1}-{season}-" + link[1].replace("/", "")
         df_gks_league = get_keeper_data(link[0], link[1])
         df_gks_league["season"] = season
@@ -251,6 +264,6 @@ if __name__ == "__main__":
   print(df_teams.head())
 
   # Goalkeepers
-  df_gks = scraper.scrape_goalkeepers()
+  df_gks = scrape_goalkeepers()
   print(df_gks.head())
 
