@@ -264,6 +264,6 @@ if __name__ == "__main__":
   print(df_teams.head())
 
   # Goalkeepers
-  df_gks = scrape_goalkeepers()
+  df_gks = scraper.scrape_goalkeepers()
   print(df_gks.head())
 
