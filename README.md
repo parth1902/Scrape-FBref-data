@@ -1,6 +1,8 @@
 
 # Scrape FBref data
 
+You can find the updated code to scrape data here: https://colab.research.google.com/drive/1PoHtZWcy8WaU1hnWmL7eCVUbxzci3-fr#scrollTo=bvMefm5dmcWs
+
 This repository is to scrape football data from fbref.com which is provided by StatsBomb - 
 specially the recently added extensive data of the top five leagues. A lot of the intrinsic scraping code has been taken from this repository: https://github.com/chmartin/FBref_EPL
 
